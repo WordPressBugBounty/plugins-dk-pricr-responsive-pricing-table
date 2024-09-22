@@ -1,0 +1,1 @@
+# plugins-dk-pricr-responsive-pricing-table
