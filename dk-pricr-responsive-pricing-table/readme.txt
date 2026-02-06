@@ -2,8 +2,8 @@
 Contributors: spwebguy
 Tags: pricing table, pricing tables, prices, pricing, shortcode, price, responsive, pricing, tables
 Requires at least: 3.6
-Tested up to: 6.5
-Stable tag: 5.1.12
+Tested up to: 6.9
+Stable tag: 5.1.13
 License: GPL2
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -93,6 +93,9 @@ Find help on [our support platform](https://help.wpdarko.com/en) for this plugin
 5. Finding the shortcode (admin view)
 
 == Changelog ==
+= 5.1.13 =
+* Fixed minor vulnerability issues
+
 = 5.1.12 =
 * Allowed third-party snippets in custom buttons
 

@@ -196,7 +196,7 @@ function dmb_rpts_settings_display() {
 		<div class="dmb_field_title">
 			<?php _e('Currency', RPT_TXTDM ) ?>
 		</div>
-		<input class="dmb_field" type="text" name="table_currency" value="<?php echo $settings['_rpt_currency']; ?>" placeholder="<?php _e('e.g. $', RPT_TXTDM ) ?>" />
+		<input class="dmb_field" type="text" name="table_currency" value="<?php echo esc_attr($settings['_rpt_currency']); ?>" placeholder="<?php _e('e.g. $', RPT_TXTDM ) ?>" />
 	</div>
 
 	<div class="dmb_clearfix"></div>

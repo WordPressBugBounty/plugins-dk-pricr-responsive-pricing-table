@@ -81,10 +81,10 @@ function dmb_rpts_plan_meta_box_save($post_id)
             (isset($_POST['are_recommended_plans'][$i]) && $_POST['are_recommended_plans'][$i]) ? $new_plans[$i]['_rpt_recommended'] = $_POST['are_recommended_plans'][$i] : $new_plans[$i]['_rpt_recommended'] = 'no';
             (isset($_POST['are_removed_currencies'][$i]) && $_POST['are_removed_currencies'][$i]) ? $new_plans[$i]['_rpt_free'] = $_POST['are_removed_currencies'][$i] : $new_plans[$i]['_rpt_free'] = 'no';
             (isset($_POST['plan_custom_classes'][$i]) && $_POST['plan_custom_classes'][$i]) ? $new_plans[$i]['_rpt_custom_classes'] = stripslashes(strip_tags(sanitize_text_field($_POST['plan_custom_classes'][$i]))) : $new_plans[$i]['_rpt_custom_classes'] = '';
-            (isset($_POST['plan_icons'][$i]) && $_POST['plan_icons'][$i]) ? $new_plans[$i]['_rpt_icon'] = stripslashes(strip_tags(sanitize_text_field($_POST['plan_icons'][$i]))) : $new_plans[$i]['_rpt_icon'] = '';
+            (isset($_POST['plan_icons'][$i]) && $_POST['plan_icons'][$i]) ? $new_plans[$i]['_rpt_icon'] = esc_url_raw($_POST['plan_icons'][$i]) : $new_plans[$i]['_rpt_icon'] = '';
 
             /* Plan settings. */
-            (isset($_POST['table_currency']) && $_POST['table_currency']) ? $table_currency = stripslashes(wp_kses_post($_POST['table_currency'])) : $table_currency = '';
+            (isset($_POST['table_currency']) && $_POST['table_currency']) ? $table_currency = sanitize_text_field($_POST['table_currency']) : $table_currency = '';
             (isset($_POST['table_btn_behavior']) && $_POST['table_btn_behavior']) ? $table_btn_behavior = stripslashes(strip_tags(sanitize_text_field($_POST['table_btn_behavior']))) : $table_btn_behavior = '';
 
             /* Font sizes. */

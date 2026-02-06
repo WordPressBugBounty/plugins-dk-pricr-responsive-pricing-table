@@ -290,7 +290,7 @@ function dmb_rpts_plan_display() {
         <div class="dmb_clearfix"></div>
 
         <div class="dmb_grid dmb_grid_35 dmb_grid_first dmb_grid_last">
-            <div class="dmb_icon_data_url" data-icon="<?php echo $plan['_rpt_icon']; ?>"></div>
+            <div class="dmb_icon_data_url" data-icon="<?php echo esc_attr($plan['_rpt_icon']); ?>"></div>
             <input class="dmb_field dmb_icon_field" name="plan_icons[]" type="text" value="" />
             <div class="dmb_upload_icon_btn dmb_button dmb_button_large dmb_button_blue">
                 <?php _e('Upload icon', RPT_TXTDM ) ?>&nbsp;

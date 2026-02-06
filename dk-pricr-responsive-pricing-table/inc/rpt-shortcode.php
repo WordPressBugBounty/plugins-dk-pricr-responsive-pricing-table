@@ -139,7 +139,7 @@ function rpt_sc($atts)
                     $table_view .= '<div '.$title_style.' class="rpt_title rpt_title_'.$key.'">';
 
                     if (!empty($plan['_rpt_icon'])) {
-                        $table_view .= '<img src="'.$plan['_rpt_icon'].'" class="rpt_icon rpt_icon_'.$key.'"/> ';
+                        $table_view .= '<img src="'.esc_url($plan['_rpt_icon']).'" class="rpt_icon rpt_icon_'.$key.'"/> ';
                     }
 
                     $table_view .= wp_kses_post($plan['_rpt_title']);
@@ -164,9 +164,9 @@ function rpt_sc($atts)
                         $currency = get_post_meta($post->ID, '_rpt_currency', true);
 
                         if (!empty($currency)) {
-                            $table_view .= '<sup class="rpt_currency">';
-                            $table_view .= wp_kses_post($currency);
-                            $table_view .= '</sup>';
+                        $table_view .= '<sup class="rpt_currency">';
+                        $table_view .= esc_html($currency);
+                        $table_view .= '</sup>';
                         }
 
                         $table_view .= do_shortcode(wp_kses_post($plan['_rpt_price']));
